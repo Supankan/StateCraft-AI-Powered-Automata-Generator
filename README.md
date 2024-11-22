@@ -1,24 +1,84 @@
-# Automata Generator
+# StateCraft: Automata Generator 🤖📐
 
-Welcome to the **Automata Generator** project! This repository contains two versions of an application that generates automata (DFA, NFA, or ε-NFA) based on user input. The automata are visualized using the `graphviz` library and saved as PNG images. The project utilizes the Gemini API to generate Python code for the automata creation process.
+## Overview
+StateCraft is an innovative automata generation tool that leverages the power of Google's Gemini AI to create state machine diagrams based on natural language descriptions.
 
-## Features
+## Versions
 
-- **Two Versions**: 
-  - **Base Version**: A command-line version that generates and saves the automata as an image file.
-  - **Streamlit Version**: A user-friendly web application that allows you to input automata descriptions and visualize the results in your browser.
-  
-- **Automata Types**: You can generate DFA (Deterministic Finite Automaton), NFA (Nondeterministic Finite Automaton), or ε-NFA (epsilon Nondeterministic Finite Automaton).
-  
-- **Easy Visualization**: The generated automata are displayed as images, and you can download them directly from the Streamlit app.
+### StateCraft V1 (Command-Line Version)
+#### Features
+- Generates automata diagrams using command-line input
+- Uses Gemini API for code generation
+- Saves automata as PNG files
+- Manual execution of generated code
 
-## Setup
+#### Requirements
+- Python 3.8+
+- Google Generative AI
+- Graphviz
+- python-dotenv
 
-To run this project, you need to set up the required dependencies and the environment for the Gemini API.
+### StateCraft V2 (Streamlit UI Version)
+#### Features
+- Web-based user interface
+- Real-time automata generation
+- Code preview
+- One-click PNG download
+- Powered by Streamlit and Gemini API
 
-### Prerequisites
+#### Requirements
+- Python 3.8+
+- Streamlit
+- Google Generative AI
+- Graphviz
+- python-dotenv
+- Pillow
 
-- Python 3.7 or higher
-- Streamlit (for the Streamlit version)
-- Graphviz (for generating automata visuals)
-- Google Gemini API key
+## Setup and Installation
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/yourusername/statecraft.git
+cd statecraft
+```
+
+### 2. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Configure API Key
+Create a `.env` file in the project root:
+```
+GOOGLE_API_KEY=your_google_api_key_here
+```
+
+## Usage
+
+### V1 (Command-Line)
+```bash
+python StateCraft_V1.py
+```
+Follow the prompt to enter your automata description.
+
+### V2 (Streamlit)
+```bash
+streamlit run StateCraft_V2_ST.py
+```
+Open the generated local URL in your browser.
+
+## Example Prompts
+- "Create a DFA that accepts binary strings divisible by 3"
+- "Generate an NFA that accepts strings starting with 'ab'"
+- "Design an automata that checks for palindrome strings"
+
+## Technology Stack
+- 🤖 AI Generation: Google Gemini API
+- 📊 Visualization: Graphviz
+- 🖥️ UI Framework: Streamlit
+- 🐍 Language: Python
+
+## Limitations
+- Requires a valid Google Generative AI API key
+- Dependent on AI's ability to generate correct code
+- Internet connection needed for API calls
